@@ -4,87 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="images\pathsphere.png">
+    <link rel="icon" type="image/x-icon" href="images/pathsphere.png">
     <style>
-.contact{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        :root {
+            --primary-color: #f0f0f0;
+            --secondary-color: #333;
+            --error-color: red;
+            --success-color: #28a745;
+        }
 
-.contact-form-container {
-    background-color:var(--primary-color);
-    margin: 50px 0px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px var(--seconday-color) ;
-    max-width: 600px;
-    width: 100%;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            margin: 0;
+            padding: 0;
+        }
 
-h1 {
-    margin-top: 0;
-    color:var(--seconday-color);
-    text-align: center;
-}
+        header {
+            background-color: var(--primary-color);
+            padding: 20px;
+        }
 
-.form-group {
-    margin-bottom: 1rem;
-}
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color:var(--seconday-color);
-}
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
 
-input, textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1rem;
-}
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
 
-textarea {
-    resize: vertical;
-}
+        a {
+            text-decoration: none;
+            color: var(--secondary-color);
+        }
 
-.error-message {
-    color: red;
-    font-size: 0.875rem;
-    display: none; /* Hidden by default */
-}
+        .hero {
+            text-align: center;
+            margin: 20px 0;
+        }
 
-.submit-button {
-    background-color: #28a745;
-    color: var(--primary-color);
-    border: none;
-    padding: 0.75rem;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
-}
+        .contact {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
 
-.submit-button:hover {
-    background-color: #218838;
-}
+        .contact-form-container {
+            background-color: var(--primary-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .error-message {
+            color: var(--error-color);
+            font-size: 0.875rem;
+            display: none; /* Hidden by default */
+        }
+
+        .submit-button {
+            background-color: var(--success-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 0.75rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: darkgreen;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo"><img src="/P (1).png">PathSphere</a>
+            <a href="index.html" class="logo"><img src="/P (1).png" alt="PathSphere Logo">PathSphere</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="scholarships.html">Scholarships</a></li>
@@ -93,65 +157,49 @@ textarea {
                 <li><a href="faqs.html">FAQs</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
-            <img src="images/dark.png" id="icon" alt="">
         </nav>
     </header>
     <main>
         <section class="hero">
             <h1>Contact Us</h1>
-            <p>Fill the below form,we will reach you out</p>
+            <p>Fill the form below, and we will reach out to you!</p>
         </section>
         <section class="contact">
             <div class="contact-form-container">
-                <h1>Submit your Details</h1>
-                <form id="contactForm">
+                <h1>Submit Your Details</h1>
+                <form id="contactForm" aria-live="polite">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" 
-                               name="name" 
-                               placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
                         <span class="error-message" id="nameError"></span>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" 
-                               name="email" 
-                               placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
                         <span class="error-message" id="emailError"></span>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="tel" id="phone" 
-                               name="phone" 
-                               placeholder="Your Phone Number" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
                         <span class="error-message" id="phoneError"></span>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" 
-                                  name="message" 
-                                  placeholder="Your Message" 
-                                  rows="5" required></textarea>
-                        <span class="error-message" 
-                              id="messageError"></span>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
                     </div>
-                    <button type="submit" 
-                            class="submit-button">
-                      Send Message
-                    </button>
+                    <button type="submit" class="submit-button">Send Message</button>
                 </form>
             </div>
-        </section>     
+        </section>
     </main>
-    <div class="footer-container">
+    <footer>
         <div class="footer-description">
             <h3>PathSphere</h3>
-            <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and
-                educators with job openings. It features dynamic search tools and community discussions to enhance
-                access to educational and career resources.</p>
+            <p>PathSphere is a comprehensive platform designed to connect students with scholarship opportunities and educators with job openings. It features dynamic search tools and community discussions to enhance access to educational and career resources.</p>
         </div>
         <div class="footer-list">
-            <h3>Quick links</h3>
+            <h3>Quick Links</h3>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="scholarships.html">Scholarships</a></li>
@@ -160,72 +208,68 @@ textarea {
             </ul>
         </div>
         <div class="footer-list">
-            <h3>Follow us on</h3>
+            <h3>Follow Us On</h3>
             <ul class="social-icons">
-                <li><a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://x.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
             </ul>
         </div>
-    </div>
-    <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
-    
+        <div class="copyright">&copy; 2024 PathSphere. All rights reserved.</div>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
     <script>
-    document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const message = document.getElementById("message").value.trim();
 
-    const errorElements = document.querySelectorAll('.error-message');
-    errorElements.forEach(el => el.style.display = 'none');
+            let isValid = true;
 
-    // Get form values
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const message = document.getElementById('message').value.trim();
+            // Clear previous error messages
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+            document.getElementById("messageError").innerText = "";
 
-    // Validation flags
-    let isValid = true;
+            // Name validation
+            if (name === "") {
+                document.getElementById("nameError").innerText = "Please enter your name.";
+                isValid = false;
+            }
 
-    // Name validation
-    if (name === '') {
-        document.getElementById('nameError').textContent = 'Name is required';
-        document.getElementById('nameError').style.display = 'block';
-        isValid = false;
-    }
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === "" || !emailPattern.test(email)) {
+                document.getElementById("emailError").innerText = "Please enter a valid email.";
+                isValid = false;
+            }
 
-    // Email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email === '' || !emailPattern.test(email)) {
-        document.getElementById('emailError').textContent = 'Valid email is required';
-        document.getElementById('emailError').style.display = 'block';
-        isValid = false;
-    }
+            // Phone validation
+            if (phone === "") {
+                document.getElementById("phoneError").innerText = "Please enter your phone number.";
+                isValid = false;
+            }
 
-    // Phone validation
-    const phonePattern = /^[0-9]{10}$/;
-    if (phone === '' || !phonePattern.test(phone)) {
-        document.getElementById('phoneError').textContent = 'Valid phone number is required';
-        document.getElementById('phoneError').style.display = 'block';
-        isValid = false;
-    }
+            // Message validation
+            if (message === "") {
+                document.getElementById("messageError").innerText = "Please enter your message.";
+                isValid = false;
+            }
 
-    // Message validation
-    if (message === '') {
-        document.getElementById('messageError').textContent = 'Message is required';
-        document.getElementById('messageError').style.display = 'block';
-        isValid = false;
-    }
-
-    // If form is valid, you can submit it or perform any other action
-    if (isValid) {
-        alert('Form submitted successfully!');
-        // You can also submit the form here using AJAX or similar methods
-    }
-});
+            // If valid, you can submit the form or perform any actions
+            if (isValid) {
+                alert("Your message has been sent successfully!");
+                // Here you could send the form data to your server if needed
+                // e.g., using fetch or XMLHttpRequest
+            }
+        });
     </script>
 </body>
 
